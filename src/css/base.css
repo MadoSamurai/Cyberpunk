@@ -17,3 +17,9 @@ ul {
 img {
   display: block;
 }
+h1,
+h2,
+h3 {
+  font-family: 'Archangelsk', sans-serif;
+  font-weight: 400;
+}

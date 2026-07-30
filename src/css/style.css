@@ -1,1 +1,6 @@
+@import url('./fonts.css');
 @import url('./base.css');
+.txt {
+  font-size: 62px;
+  color: #000;
+}
