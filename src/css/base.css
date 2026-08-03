@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  position: relative;
 }
 * {
   font-family: 'Roboto', sans-serif;
@@ -22,4 +23,16 @@ h2,
 h3 {
   font-family: 'Archangelsk', sans-serif;
   font-weight: 400;
+}
+.container {
+  /* max-width: 1304px; */
+  max-width: 320px;
+
+  padding: 0 12px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 1024px) {
+    max-width: 1352px;
+    padding: 0 36px;
+  }
 }
