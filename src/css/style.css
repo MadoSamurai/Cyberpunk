@@ -3,6 +3,7 @@
 /* Header */
 .header {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,6 +20,9 @@
   justify-content: space-between;
   margin-top: 10px;
 }
+.header-link {
+  cursor: pointer;
+}
 @media screen and (min-width: 1024px) {
   .header-nav {
     flex-direction: row;
@@ -32,12 +36,85 @@
 /* /Header */
 
 /* hero */
-.hero-content {
+.hero-container {
   background-image: url(/src/img/hero-bg-mob.jpg);
   background-position: center;
   background-position-y: top;
   background-repeat: no-repeat;
   width: 100%;
   height: 766px;
+  position: relative;
+}
+.hero-content {
+  padding: 30px 38px;
+  background-color: #f8f200;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  clip-path: polygon(
+    50px 0%,
+    100% 0%,
+    100% calc(100% - 50px),
+    calc(100% - 50px) 100%,
+    0% 100%,
+    0% 50px
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.hero-title {
+  font-size: 30px;
+  color: #000;
+}
+.hero-btn {
+  background: #000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 2;
+  text-align: center;
+  color: #f8f200;
+  padding: 10px 50px;
+  margin-top: 25px;
+  cursor: pointer;
 }
 /* /hero */
+
+/* about */
+.about {
+  padding-top: 70px;
+}
+.about-title {
+  font-size: 30px;
+  color: #000;
+}
+.about-descr {
+  font-weight: 400;
+  color: #777;
+  font-size: 16px;
+  line-height: 2;
+  margin-top: 25px;
+}
+.about-descr .accent {
+  color: #52bedc;
+  font-weight: 700;
+}
+.about-media {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 32px;
+  margin-top: 70px;
+}
+.about-container {
+  padding: 0;
+}
+.about-info {
+  padding: 0 12px;
+}
+.about-img {
+  width: 100%;
+}
+/* /about */

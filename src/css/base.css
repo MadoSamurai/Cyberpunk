@@ -1,17 +1,18 @@
-body {
-  margin: 0;
-  position: relative;
-}
 * {
   font-family: 'Roboto', sans-serif;
   box-sizing: border-box;
   outline: none;
+  border: none;
+  margin: 0;
 }
+body {
+  position: relative;
+}
+
 a {
   display: block;
 }
 ul {
-  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -24,10 +25,10 @@ h3 {
   font-family: 'Archangelsk', sans-serif;
   font-weight: 400;
 }
+
 .container {
   /* max-width: 1304px; */
-  max-width: 320px;
-
+  max-width: 342px;
   padding: 0 12px;
   margin: 0 auto;
 
