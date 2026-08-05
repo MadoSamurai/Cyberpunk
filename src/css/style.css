@@ -41,6 +41,7 @@
   background-position: center;
   background-position-y: top;
   background-repeat: no-repeat;
+  background-size: 100% 93%;
   width: 100%;
   height: 766px;
   position: relative;
@@ -97,7 +98,7 @@
   line-height: 2;
   margin-top: 25px;
 }
-.about-descr .accent {
+.accent {
   color: #52bedc;
   font-weight: 700;
 }
@@ -118,3 +119,42 @@
   width: 100%;
 }
 /* /about */
+
+/* promo */
+.promo {
+  background-color: #000;
+  margin-top: 140px;
+}
+.promo-content {
+  position: relative;
+}
+.promo-decor-top,
+.promo-decor-bottom {
+  position: absolute;
+  width: 100%;
+}
+.promo-decor-top {
+  top: -69px;
+  left: 0;
+}
+.promo-images {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.promo-title {
+  font-size: 30px;
+  color: #fff;
+  margin-top: 25px;
+}
+.promo-descr {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  color: #fff;
+}
+/* .promo-promotion {
+  fill: transparent;
+  stroke: #f8f200;
+} */
+/* /promo */
