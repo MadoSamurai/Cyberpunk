@@ -1,0 +1,17 @@
+.back-btn {
+  background-color: #000;
+  display: inline-block;
+  color: #f8f200;
+  font-weight: 700;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  margin-top: 35px;
+  transition: background-color 0.2s;
+}
+.back-btn:hover {
+  background-color: #000000d4;
+}
+.shop {
+  padding-top: 70px;
+}
