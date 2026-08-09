@@ -3,19 +3,29 @@
     <div class="immersion-content">
       <div class="immersion-media">
         <picture>
-          <source />
-          <source />
+          <source
+            media="(min-width: 1400px)"
+            srcset="/src/img/monitor-desc.png"
+          />
+          <source
+            media="(min-width: 1024px)"
+            srcset="/src/img/monitor-pad.png"
+          />
           <img class="immersion-img" src="/src/img/monitor.png" alt="" />
         </picture>
-        <div class="immersion-media-icons">
-          <svg width="44" height="44">
-            <use href="/public/icons.svg#icon-hp-logo"></use>
-          </svg>
-          <span class="immersion-media-cross"> </span>
-          <svg width="175" height="44">
-            <use href="/public/icons.svg#icon-logo"></use>
-          </svg>
-        </div>
+        <ul class="immersion-media-icons">
+          <li>
+            <svg width="44" height="44" class="immersion-hp-icon">
+              <use href="/public/icons.svg#icon-hp-logo"></use>
+            </svg>
+          </li>
+          <li><span class="immersion-media-cross"> </span></li>
+          <li>
+            <svg width="175" height="44" class="immersion-cyberpunk-icon">
+              <use href="/public/icons.svg#icon-logo"></use>
+            </svg>
+          </li>
+        </ul>
       </div>
       <div class="immersion-info">
         <h2 class="immersion-title">Полное погружение вместе с HP</h2>

@@ -1,81 +1,83 @@
 <section class="promo">
   <div class="container">
     <div class="promo-content">
-      <!-- <picture>
-        <source />
-        <source />
-        <img
-          class="promo-decor-top"
-          src="/src/img/promo-decor-top.png"
-          alt=""
-        />
-      </picture> -->
       <div class="promo-images">
         <svg class="promo-promotion" width="62" height="62">
           <use href="/public/icons.svg#icon-promotion"></use>
         </svg>
-        <img src="/src/img/x-box.png" alt="x-box" />
-        <img src="/src/img/ps5.png" alt="ps5" />
+        <picture>
+          <source media="(min-width: 1024px)" srcset="/src/img/x-box-pad.png" />
+          <img src="/src/img/x-box.png" alt="x-box" />
+        </picture>
+        <picture>
+          <source media="(min-width: 1024px)" srcset="/src/img/ps5-pad.png" />
+          <img src="/src/img/ps5.png" alt="ps5" />
+        </picture>
       </div>
-      <h2 class="promo-title">Играй и выигрывай!</h2>
-      <p class="promo-descr">
-        Играй в <span class="accent">Cyberpunk 2077</span> и получи возможность
-        выиграть консоль <span class="accent">Xbox Series X</span> или
-        <span class="accent">Sony PlayStation 5!</span> Заполни форму ниже и
-        приложи скриншот о покупке игры. Итоги розыгрыша будут подведены
-        1 февраля. Удачи! ;)
-      </p>
+      <div class="promo-info">
+        <h2 class="promo-title">Играй и выигрывай!</h2>
+        <p class="promo-descr">
+          Играй в <span class="accent">Cyberpunk 2077</span> и получи
+          возможность выиграть консоль
+          <span class="accent">Xbox Series X</span> или
+          <span class="accent">Sony PlayStation 5!</span> Заполни форму ниже и
+          приложи скриншот о покупке игры. Итоги розыгрыша будут подведены
+          1 февраля. Удачи! ;)
+        </p>
 
-      <form action="#" class="promo-form">
-        <input
-          type="text"
-          name="name"
-          id="name"
-          class="form-input"
-          placeholder="Как тебя зовут?"
-          autocomplete="off"
-        />
-        <input
-          type="email"
-          name="email"
-          id="email"
-          class="form-input"
-          placeholder="Твой е-mail"
-          autocomplete="off"
-        />
-        <button type="submit" class="promo-submit">Отправить</button>
-
-        <div class="promo-check-field">
+        <form action="#" class="promo-form">
           <input
-            type="checkbox"
-            class="input-check input-check-hidden"
-            name="promo-check"
-            id="promo-check"
-            value="true"
+            type="text"
+            name="name"
+            id="name"
+            class="form-input"
+            placeholder="Как тебя зовут?"
+            autocomplete="off"
           />
-          <label class="promo-check" for="promo-check">
-            <span class="check-mark">
-              <svg class="check-mark-icon" width="8" height="7">
-                <use href="/public/icons.svg#icon-check"></use>
-              </svg>
-            </span>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="form-input"
+            placeholder="Твой е-mail"
+            autocomplete="off"
+          />
 
-            <span class="promo-sheck-txt">
-              Согласен на обработку персональных данных
-            </span>
+          <label class="form-drop" id="drop-zone">
+            <input
+              type="file"
+              id="file-input"
+              accept=".png, .jpg, .jpeg, .pdf"
+              hidden
+            />
+            <span class="form-drop-text">Прикрепить скриншот</span>
+            <span class="form-drop-hint">.png / .jpg / .pdf</span>
           </label>
-        </div>
-      </form>
-    </div>
 
-    <!-- <picture>
-      <source />
-      <source />
-      <img
-        class="promo-decor-bottom"
-        src="/src/img/promo-decor-bottom.png"
-        alt=""
-      />
-    </picture> -->
+          <button type="submit" class="promo-submit">Отправить</button>
+
+          <div class="promo-check-field">
+            <input
+              type="checkbox"
+              class="input-check input-check-hidden"
+              name="promo-check"
+              id="promo-check"
+              value="true"
+            />
+            <label class="promo-check" for="promo-check">
+              <span class="check-mark">
+                <svg class="check-mark-icon" width="8" height="7">
+                  <use href="/public/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+
+              <span class="promo-sheck-txt">
+                Согласен на обработку персональных данных
+              </span>
+            </label>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </section>

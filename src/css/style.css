@@ -23,16 +23,7 @@
 .header-link {
   cursor: pointer;
 }
-@media screen and (min-width: 1024px) {
-  .header-nav {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .header-links {
-    gap: 40px;
-  }
-}
+
 /* /Header */
 
 /* hero */
@@ -46,6 +37,7 @@
   height: 766px;
   position: relative;
 }
+
 .hero-content {
   padding: 30px 38px;
   background-color: #f8f200;
@@ -53,6 +45,7 @@
   z-index: 1;
   bottom: 0;
   right: 0;
+  width: 320px;
   clip-path: polygon(
     50px 0%,
     100% 0%,
@@ -71,7 +64,7 @@
   color: #000;
 }
 .hero-btn {
-  background: #000;
+  background-color: #000;
   font-weight: 700;
   font-size: 20px;
   line-height: 2;
@@ -80,6 +73,12 @@
   padding: 10px 50px;
   margin-top: 25px;
   cursor: pointer;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+.hero-btn:hover {
+  background-color: #000000d4;
 }
 /* /hero */
 
@@ -124,7 +123,7 @@
 .promo {
   background-color: #000;
   margin-top: 140px;
-  padding-top: 55px;
+  padding-top: 70px;
   padding-bottom: 70px;
 }
 .promo-content {
@@ -180,12 +179,46 @@
 .form-input:focus {
   border-color: #f8f200;
 }
+.form-drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 0;
+  border: 1px dashed #666;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  transition:
+    background-color 0.2s,
+    border-color 0.2s;
+}
+.form-drop:hover,
+.form-drop--over {
+  border-color: #f8f200;
+  background-color: #f8f4002a;
+}
+.form-drop span {
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+}
+.form-drop-hint {
+  display: none;
+}
+
 .promo-submit {
-  background: #f8f200;
+  background-color: #f8f200;
   font-weight: 700;
   font-size: 16px;
   color: #000;
   padding: 20px 50px;
+  transition: background-color 0.2s;
+}
+.promo-submit:hover {
+  background-color: #f8f200d4;
 }
 .promo-check {
   display: flex;
@@ -284,6 +317,7 @@
 .immersion-benefits-item {
   display: flex;
   align-items: center;
+  font-size: 16px;
 }
 .immersion-benefits-icon {
   margin-right: 18px;
@@ -291,11 +325,15 @@
 }
 .immersion-btn-more {
   padding: 20px 50px;
-  background: #000;
+  background-color: #000;
   font-weight: 700;
   font-size: 16px;
   color: #f8f200;
   margin-top: 40px;
+  transition: background-color 0.2s;
+}
+.immersion-btn-more:hover {
+  background-color: #000000d4;
 }
 /* /immersion */
 
@@ -358,4 +396,257 @@
   display: flex;
   align-items: center;
 }
+.overview-info {
+  padding: 0px 12px;
+}
 /* /overview */
+
+/* footer */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+}
+.footer-content-top {
+  background-color: #fff;
+  padding-top: 40px;
+  padding-bottom: 25px;
+}
+.footer-icons-list,
+.footer-polici-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.footer-polici-list {
+  gap: 15px;
+  margin-top: 50px;
+}
+.footer-polici-link {
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+}
+.footer-content-bottom {
+  background-color: #000;
+  padding: 13px 0;
+  text-align: center;
+}
+.footer-title {
+  font-weight: 400;
+  font-size: 12px;
+
+  color: #fff;
+}
+
+/* /footer */
+
+@media screen and (min-width: 1024px) {
+  .header-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-links {
+    gap: 40px;
+  }
+  .logo {
+    width: 296px;
+    height: 74px;
+  }
+  .hero-container {
+    background-image: none;
+    height: 100%;
+  }
+  .hero {
+    background-image: url(/src/img/hero-bg-pad.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+    background-size: auto;
+  }
+  .hero-content {
+    width: 624px;
+    padding: 70px;
+    right: 36px;
+  }
+  .hero-title {
+    font-weight: 400;
+    font-size: 62px;
+    text-align: left;
+  }
+  .hero-btn {
+    font-size: 24px;
+  }
+
+  .about-title {
+    font-size: 62px;
+    width: 620px;
+  }
+  .about-info {
+    padding: 0;
+  }
+  .about-container {
+    padding: 0 36px;
+  }
+  .about-descr {
+    font-size: 18px;
+  }
+  .about-media {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .about-img {
+    width: auto;
+  }
+  .promo {
+    padding-top: 95px;
+  }
+  .promo-content {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 32px;
+  }
+  .promo-images {
+    flex-direction: column;
+  }
+  .promo-title {
+    font-size: 62px;
+    margin-top: 67px;
+  }
+  .promo-descr {
+    font-size: 18px;
+    margin-top: 25px;
+  }
+  .promo-form {
+    margin-top: 98px;
+  }
+  .form-input {
+    font-size: 18px;
+  }
+  .promo-submit {
+    font-size: 18px;
+  }
+  .immersion-content {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+  .immersion-media {
+    margin-top: 42px;
+  }
+  .immersion-media-icons {
+    flex-direction: column;
+    gap: 25px;
+  }
+  .immersion-media-cross {
+    display: block;
+  }
+  .immersion-title {
+    font-size: 62px;
+    margin-top: 0;
+  }
+  .immersion-descr {
+    font-size: 18px;
+  }
+  .immersion-benefits-item {
+    font-size: 18px;
+  }
+  .immersion-benefits-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .immersion-btn-more {
+    font-size: 18px;
+  }
+  .overview {
+    padding-bottom: 0;
+  }
+  .overview-content {
+    display: flex;
+    gap: 32px;
+  }
+  .overview-title {
+    font-size: 62px;
+  }
+  .overview-set-title,
+  .overview-platform-title {
+    font-size: 24px;
+  }
+  .overview-set-item {
+    font-size: 18px;
+  }
+  .overview-set-icon {
+    width: 32px;
+    height: 32px;
+  }
+  .overview-platform {
+    width: 319px;
+  }
+
+  .footer-content-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 36px;
+  }
+  .footer-icons-list,
+  .footer-polici-list {
+    flex-direction: row;
+    margin-top: 0;
+    gap: 32px;
+  }
+  .footer-cyberpunk-icon {
+    width: 296px;
+    height: 74px;
+  }
+  .footer-cdprodg-icon {
+    width: 172px;
+    height: 74px;
+  }
+  .footer-polici-link {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1400px) {
+  .hero {
+    background-image: url('/src/img/hero-bg-desk.jpg');
+  }
+  .immersion-media-icons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .immersion-hp-icon {
+    width: 80px;
+    height: 80px;
+  }
+  .immersion-cyberpunk-icon {
+    width: 320px;
+    height: 80px;
+  }
+  .immersion-media-cross {
+    width: 90px;
+  }
+  .immersion-media-cross::after,
+  .immersion-media-cross::before {
+    width: 90px;
+  }
+  .overview .container {
+    max-width: 100%;
+  }
+  .footer-content-top {
+    min-width: 1352px;
+    margin: 0 auto;
+    /* padding: 13px 0; */
+  }
+  .form-drop-hint {
+    display: block;
+  }
+  .promo-content {
+    justify-content: space-between;
+    gap: 0;
+  }
+  .promo-info {
+    max-width: 550px;
+  }
+}
