@@ -15,3 +15,11 @@
 .shop {
   padding-top: 70px;
 }
+.shop-items-list {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.shop-items-card {
+  width: calc((100% - 30px * 3) / 4);
+}
