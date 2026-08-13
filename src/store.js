@@ -28,7 +28,7 @@ async function serviceShop() {
 
 serviceShop()
   .then(data => {
-    console.log(data);  
+    console.log(data);
     container.innerHTML = createMarcup(data.results);
   })
   .catch(error => {
@@ -46,3 +46,43 @@ function createMarcup(arr) {
     </li>
   `).join("");
   }
+
+// const BASE_URL = "https://deserts-store.b.goit.study/api";
+// let END_POINT = "";
+
+// const container = document.querySelector('.card-list');
+
+// async function dessertAPI(END_POINT, page) {
+//   const { data } = await axios(`${BASE_URL}/${END_POINT}`, {
+//     method: 'GET',
+//     params: {
+//       limit: 8,
+//       page: page
+//     }
+    
+//   });
+//   console.log(data);
+//   return data;
+  
+// };
+// dessertAPI('desserts', 2)
+//   .then(data => {
+//     container.insertAdjacentHTML('beforeend', dessertsMarcup(data.desserts))
+//   })
+//   .catch(error => {
+//     alert(error.message);
+//   })
+
+// function dessertsMarcup(data) {
+//   return data.map(({ _id, category: {name: categoryName }, description, image, name, price }) => `
+//     <li class="card-item" data-id="${_id}">
+//       <img class="card-img" src="${image}" alt="${name}" />
+//       <p class="card-category"> ${categoryName}</p>
+//       <h3 class="card-name"> ${name}</h3>
+//       <p class="crad-descr"> ${description}</p>
+//       <p class="card-price"><span class="price-value">${price}</span>грн</p>
+//       <button class="card-btn" type="button">кнопка</button>
+//     </li>
+//   `)
+  
+// }
